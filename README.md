@@ -1,8 +1,8 @@
-# Tensor-Flow-Project--8--
+# Tensor-Flow-Project--9--
 
 <table>
   
-**In this project we'll be applying Transfer Learning to solve very famous Food Vision 101 challenge of Image Classification using 100% percent i.e whole Food 101 dataset** <br></br>
+**In this project we'll be applying Natural Language Processing to solve Natural Language Processing with Disaster Tweets and clssifying them on different tweets.** <br></br>
 
 **Let's looks into dataset:** <br></br>
 
@@ -34,22 +34,15 @@ You are predicting whether a given tweet is about a real disaster or not. If so,
 
 TensorFlow is a free and open-source software library for machine learning and artificial intelligence. It can be used across a range of tasks but has a particular focus on training and inference of deep neural networks. It was developed by the Google Brain team for Google's internal use in research and production. <br></br>
 
-**What is a Transfer Learning?** <br></br>
+**What is a Natural Language Processing?** <br></br>
 
-Transfer learning is a machine learning technique in which knowledge gained through one task or dataset is used to improve model performance on another related task and/or different dataset. <br></br>
+Natural language processing (NLP) is a subfield of computer science and artificial intelligence (AI) that uses machine learning to enable computers to understand and communicate with human language.  <br></br>
 
 **What is a Classification?** <br></br>
 
 Classification is a supervised machine learning process of categorizing a given set of input data into classes based on one or more variables. <br></br>
 
-**What is a Feature Extractor Transfer Learning?** <br></br>
-It Uses the representations learned by a previous network to extract meaningful features from new samples.<br></br>
-
-**What is a Fine Tuned Transfer Learning?** <br></br>
-Fine-tuning is a type of transfer learning. It involves taking a pre-trained model, which has been trained on a large dataset for a general task such as image recognition or natural language understanding and making minor adjustments to its internal parameters.<br></br>
-
-
-**Important Note: Before Jumping to the code go through the Food Vision 101 dataset by clicking on this link (https://www.tensorflow.org/datasets/catalog/food101) to learn more. To understand more about these transfer learning methods type please visit this link to know them in detail (https://medium.com/munchy-bytes/transfer-learning-and-fine-tuning-363b3f33655d#:~:text=Fine%2Dtuning%20is%20a%20type,adjustments%20to%20its%20internal%20parameters.) For more information about transfer learning models used here go to (https://www.tensorflow.org/api_docs/python/tf/keras/applications/ResNet50V2) for ResNet50V2 to learn more about that and go to (https://arxiv.org/abs/2104.00298) to know about EfficientNet-V2.**
+**Important Note: Before Jumping to the code go through the Natural Language Processing with Disaster Tweets dataset by clicking on this link(https://www.kaggle.com/competitions/nlp-getting-started/data).**
 
 </table>
 
