@@ -4,7 +4,7 @@
   
 **In this project we'll be applying Natural Language Processing to solve Natural Language Processing with Disaster Tweets and clssifying them on different tweets.** <br></br>
 
-**Let's looks into dataset:** <br>
+**Let's looks into dataset:** <br></br>
 
 **About Dataset**: <br></br>
 
@@ -16,16 +16,16 @@ Each sample in the train and test set has the following information:<br></br>
 
 1. The text of a tweet<br>
 2. A keyword from that tweet (although this may be blank!)<br>
-3. The location the tweet was sent from (may also be blank<br>
+3. The location the tweet was sent from (may also be blank<br></br>
 
 **What am I predicting**?<br></br>
 You are predicting whether a given tweet is about a real disaster or not. If so, predict a 1. If not, predict a 0.<br></br>
 
 **Columns**: <br></br>
-1. id - a unique identifier for each tweet<br></br>
-2. text - the text of the tweet<br></br>
-3. location - the location the tweet was sent from (may be blank)<br></br>
-4. keyword - a particular keyword from the tweet (may be blank)<br></br>
+1. id - a unique identifier for each tweet<br>
+2. text - the text of the tweet<br>
+3. location - the location the tweet was sent from (may be blank)<br>
+4. keyword - a particular keyword from the tweet (may be blank)<br>
 5. target - in train.csv only, this denotes whether a tweet is about a real disaster (1) or not (0)<br></br>
 
 **Before jumping to the code lets understand what is TensorFlow and What do you mean by Transfer Learning, What is Classification problem and What do we actually understand by Feature Extraction and Fine Tuned Transfer Learning?**...<br></br>
