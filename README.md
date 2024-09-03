@@ -10,7 +10,7 @@
 
 You'll need train.csv, test.csv and sample_submission.csv.<br></br>
 
-**What should I expect the data format to be**?<br></br>
+**What should I expect the data format to be**?<br>
 
 Each sample in the train and test set has the following information:<br></br>
 
