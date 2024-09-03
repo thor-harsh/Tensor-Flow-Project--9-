@@ -6,7 +6,7 @@
 
 **Let's looks into dataset:** <br></br>
 
-**About Dataset**: <br></br>
+**About Dataset**: <br>
 
 You'll need train.csv, test.csv and sample_submission.csv.<br></br>
 
