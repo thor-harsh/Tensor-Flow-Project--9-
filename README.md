@@ -21,7 +21,7 @@ Each sample in the train and test set has the following information:<br></br>
 **What am I predicting**?<br></br>
 You are predicting whether a given tweet is about a real disaster or not. If so, predict a 1. If not, predict a 0.<br></br>
 
-**Columns**: <br></br>
+**Columns**: <br>
 1. id - a unique identifier for each tweet<br>
 2. text - the text of the tweet<br>
 3. location - the location the tweet was sent from (may be blank)<br>
