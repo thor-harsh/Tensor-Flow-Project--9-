@@ -34,7 +34,7 @@ You are predicting whether a given tweet is about a real disaster or not. If so,
 
 TensorFlow is a free and open-source software library for machine learning and artificial intelligence. It can be used across a range of tasks but has a particular focus on training and inference of deep neural networks. It was developed by the Google Brain team for Google's internal use in research and production. <br></br>
 
-**What is a Natural Language Processing?** <br></br>
+**What is a Natural Language Processing?** <br>
 
 Natural language processing (NLP) is a subfield of computer science and artificial intelligence (AI) that uses machine learning to enable computers to understand and communicate with human language.  <br></br>
 
