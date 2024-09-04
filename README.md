@@ -2,7 +2,7 @@
 
 <table>
   
-**In this project we'll be applying Natural Language Processing to solve Natural Language Processing with Disaster Tweets and clssifying them on different tweets.** <br></br>
+**In this project we'll be applying Natural Language Processing to solve Natural Language Processing with Disaster Tweets and clssifying them in different classes of tweets.** <br></br>
 
 **Let's looks into dataset:** <br></br>
 
