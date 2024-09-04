@@ -34,7 +34,35 @@ You are predicting whether a given tweet is about a real disaster or not. If so,
 
 TensorFlow is a free and open-source software library for machine learning and artificial intelligence. It can be used across a range of tasks but has a particular focus on training and inference of deep neural networks. It was developed by the Google Brain team for Google's internal use in research and production. <br></br>
 
-**What is a Natural Language Processing?** <br>
+**What is a Natural Language Processing?** <br># 1. Setup token inputs/model
+token_inputs = layers.Input(shape=[], dtype=tf.string, name="token_input")
+token_embeddings = tf_hub_embedding_layer(token_inputs)
+token_output = layers.Dense(128, activation="relu")(token_embeddings)
+token_model = tf.keras.Model(inputs=token_inputs,
+                             outputs=token_output)
+
+# 2. Setup char inputs/model
+char_inputs = layers.Input(shape=(1,), dtype=tf.string, name="char_input")
+char_vectors = char_vectorizer(char_inputs)
+char_embeddings = char_embed(char_vectors)
+char_bi_lstm = layers.Bidirectional(layers.LSTM(25))(char_embeddings) # bi-LSTM shown in Figure 1 of https://arxiv.org/pdf/1612.05251.pdf
+char_model = tf.keras.Model(inputs=char_inputs,
+                            outputs=char_bi_lstm)
+
+# 3. Concatenate token and char inputs (create hybrid token embedding)
+token_char_concat = layers.Concatenate(name="token_char_hybrid")([token_model.output, 
+                                                                  char_model.output])
+
+# 4. Create output layers - addition of dropout discussed in 4.2 of https://arxiv.org/pdf/1612.05251.pdf
+combined_dropout = layers.Dropout(0.5)(token_char_concat)
+combined_dense = layers.Dense(200, activation="relu")(combined_dropout) # slightly different to Figure 1 due to different shapes of token/char embedding layers
+final_dropout = layers.Dropout(0.5)(combined_dense)
+output_layer = layers.Dense(num_classes, activation="softmax")(final_dropout)
+
+# 5. Construct model with char and token inputs
+model_4 = tf.keras.Model(inputs=[token_model.input, char_model.input],
+                         outputs=output_layer,
+                         name="model_4_token_and_char_embeddings")
 
 Natural language processing (NLP) is a subfield of computer science and artificial intelligence (AI) that uses machine learning to enable computers to understand and communicate with human language.  <br></br>
 
