@@ -42,7 +42,7 @@ Natural language processing (NLP) is a subfield of computer science and artifici
 
 Classification is a supervised machine learning process of categorizing a given set of input data into classes based on one or more variables. <br></br>
 
-**Important Note: Before Jumping to the code go through the Natural Language Processing with Disaster Tweets dataset by clicking on this link(https://www.kaggle.com/competitions/nlp-getting-started/data).**
+**Important Note: Before Jumping to the code please go through the Natural Language Processing with Disaster Tweets dataset by clicking on this link(https://www.kaggle.com/competitions/nlp-getting-started/data).**
 
 </table>
 
