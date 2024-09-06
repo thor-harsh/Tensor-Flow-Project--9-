@@ -28,7 +28,7 @@ You are predicting whether a given tweet is about a real disaster or not. If so,
 4. keyword - a particular keyword from the tweet (may be blank)<br>
 5. target - in train.csv only, this denotes whether a tweet is about a real disaster (1) or not (0)<br></br>
 
-**Before jumping to the code lets understand what is TensorFlow and What do you mean by Transfer Learning, What is Classification problem and What do we actually understand by Feature Extraction and Fine Tuned Transfer Learning?**...<br></br>
+**Before jumping to the code lets understand what is TensorFlow, What is Classification problem and What do we actually understand by Natural Language Processing(NLP)?**...<br></br>
 
 **What is a TensorFlow?** <br></br>
 
