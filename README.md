@@ -134,7 +134,7 @@ python --version
    # Temporarily comment out: from shapely.geometry import Polygon
    ```
 
-2. For persistent VTK errors, comment out specific lines in `vtkmodules/all.py`
+2. For persistent VTK errors, comment out specific lines like I commented out 55, and 58 in `vtkmodules/all.py`
 
 ## Final Notes
 
