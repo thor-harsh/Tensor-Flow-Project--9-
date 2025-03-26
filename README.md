@@ -1,51 +1,154 @@
-# Tensor-Flow-Project--9--
+# Robo-106 Project Setup Guide
 
-<table>
-  
-**In this project we'll be applying Natural Language Processing to solve Natural Language Processing with Disaster Tweets and clssifying them in different classes of tweets i.e whether the given tweet is related to Disaster or Not?** <br></br>
+## Table of Contents
+1. [Prerequisites](#prerequisites)
+2. [Environment Setup](#environment-setup)
+3. [Installation Steps](#installation-steps)
+4. [Troubleshooting](#troubleshooting)
+5. [Running the Project](#running-the-project)
 
-**Let's looks into dataset:** <br></br>
+## Prerequisites
 
-**About Dataset**: <br>
+Before you begin, ensure you have the following installed:
+- Anaconda or Miniconda
+- Git
+- Python 3.10
 
-You'll need train.csv, test.csv and sample_submission.csv.<br></br>
+## Environment Setup
 
-**What should I expect the data format to be**?<br>
+### 1. Create Conda Environment
 
-Each sample in the train and test set has the following information:<br></br>
+Create a new Conda environment specifically for Robo-106:
 
-1. The text of a tweet<br>
-2. A keyword from that tweet (although this may be blank!)<br>
-3. The location the tweet was sent from (may also be blank<br></br>
+```bash
+# Create the environment
+conda create --name r106 python=3.10
 
-**What am I predicting**?<br></br>
-You are predicting whether a given tweet is about a real disaster or not. If so, predict a '1'. If not, predict a '0'.<br></br>
+# Activate the environment
+conda activate r106
+```
 
-**Columns**: <br>
-1. id - a unique identifier for each tweet<br>
-2. text - the text of the tweet<br>
-3. location - the location the tweet was sent from (may be blank)<br>
-4. keyword - a particular keyword from the tweet (may be blank)<br>
-5. target - in train.csv only, this denotes whether a tweet is about a real disaster (1) or not (0)<br></br>
+### 2. Install Dependencies
 
-**Before jumping to the code lets understand what is TensorFlow, What is Classification problem and What do we actually understand by Natural Language Processing(NLP)?**...<br></br>
+You have two methods to install dependencies:
 
-**What is a TensorFlow?** <br></br>
+#### Method 1: Using requirements.txt
 
-TensorFlow is a free and open-source software library for machine learning and artificial intelligence. It can be used across a range of tasks but has a particular focus on training and inference of deep neural networks. It was developed by the Google Brain team for Google's internal use in research and production. <br></br>
+```bash
+# Install dependencies from requirements file
+pip install -r requirements.txt
+```
 
-**What is a Natural Language Processing?** <br></br>
+#### Method 2: Using environment.yaml (Backup Method)
 
-Natural language processing (NLP) is a subfield of computer science and artificial intelligence (AI) that uses machine learning to enable computers to understand and communicate with human language.  <br></br>
+```bash
+# Create environment from yaml file
+conda env create -f environment.yaml
 
-**What is a Classification?** <br></br>
+# Activate the environment
+conda activate r106
+```
 
-Classification is a supervised machine learning process of categorizing a given set of input data into classes based on one or more variables. <br></br>
+## Configuration
 
-**Important Note: Before Jumping to the code please go through the Natural Language Processing with Disaster Tweets dataset by clicking on this link(https://www.kaggle.com/competitions/nlp-getting-started/data).**
+### Set Mode in local_config.py
 
-</table>
+Open `local_config.py` and set the MODE:
 
-**So what are you waiting for...? Jump to the code to get started. As usual for any doubt or query see you in pull request section 😁😂. Thanks!**
+```python
+MAIN = {'MODE': 0}  # 0 for running simulations
+```
 
+## Troubleshooting Common Dependencies
 
+If you encounter issues with specific libraries, install them manually:
+
+```bash
+# Upgrade pip
+pip install --upgrade pip
+
+# Individual library installations
+pip install matplotlib
+pip install shapely
+pip install opencv-python
+pip install Pillow
+pip install scikit-learn
+pip install trimesh
+pip install imageio
+pip install pythreejs
+```
+
+### PyVista and VTK Installation
+
+If you have trouble with PyVista:
+
+```bash
+# Try specific version
+pip install pyvista==0.34.0
+
+# Alternative: Conda installation
+conda install -c conda-forge pyvista vtk
+```
+
+### VTK and HDF5 Specific Installation
+
+```bash
+# Install via Conda
+conda install -c conda-forge vtk hdf5
+```
+
+## Running the Project
+
+Once all dependencies are installed:
+
+```bash
+# Run the main script
+python sockets.py
+```
+
+## Additional Troubleshooting
+
+### Library Path Issues
+
+If you encounter library path problems:
+
+```bash
+# Check HDF5 libraries
+ldconfig -p | grep hdf5
+
+# Add library path (example path, adjust as needed)
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/path/to/your/lib
+```
+
+### Python Version Check
+
+```bash
+# Verify Python version
+python --version
+```
+
+## Common Fixes
+
+1. If `shapely` causes issues, you can comment out its import in `plan.py`:
+   ```python
+   # Temporarily comment out: from shapely.geometry import Polygon
+   ```
+
+2. For persistent VTK errors, comment out specific lines in `vtkmodules/all.py`
+
+## Final Notes
+
+- Always ensure you're in the `r106` Conda environment before running the project
+- If a step doesn't work, carefully read the error message and revisit the corresponding section
+- When in doubt, reinstall the specific problematic library
+
+## Support
+
+If you continue to experience issues:
+- Double-check your Python and library versions
+- Ensure all dependencies are compatible
+- Consider creating a new Conda environment from scratch
+
+---
+
+**Disclaimer**: This guide is based on the original setup documentation. Your specific environment might require slight modifications.
